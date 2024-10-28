@@ -70,6 +70,7 @@ const Transactions = () => {
                         <th>Amount</th>
                         <th>Date</th>
                         <th>Category</th>
+                        <th>Diao</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -81,6 +82,7 @@ const Transactions = () => {
                             <td>{transaction.amount}</td>
                             <td>{transaction.date}</td>
                             <td>{transaction.category.name} ({transaction.category.type})</td>
+                            <td>asdasdad</td>
                         </tr>
                         );
                     })}
