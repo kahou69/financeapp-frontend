@@ -82,7 +82,7 @@ const Transactions = () => {
                             <td>{transaction.amount}</td>
                             <td>{transaction.date}</td>
                             <td>{transaction.category.name} ({transaction.category.type})</td>
-                            <td>asdasdad</td>
+                            <td>asdasdadas</td>
                         </tr>
                         );
                     })}
