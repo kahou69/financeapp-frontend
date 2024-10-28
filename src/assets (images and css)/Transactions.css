@@ -1,33 +1,26 @@
 .trans-table {
-    display : flex;
-    justify-content: center;
-    padding:2em;
-   
- 
+  display: flex;
+  justify-content: center;
+  padding: 2em;
 }
 
 table {
-    width: 100%;
-    overflow: auto;
-    border-radius: 5px;
-    border: 0.000001mm solid;
-    border-color: rgba(153, 161, 179, 0.5);
+  width: 100%;
+  overflow: auto;
+  border-radius: 5px;
+  border: 0.000001mm solid;
+  border-color: rgba(153, 161, 179, 0.5);
 }
 
-th, td {
-    padding : 10px;
+th,
+td {
+  padding: 10px;
 }
 
 tbody {
-    background-color: #16181d;
+  background-color: #16181d;
 }
-   
 
 thead {
-    background-color: #fffbdd1a;
+  background-color: #fffbdd1a;
 }
-
-
-
-
-

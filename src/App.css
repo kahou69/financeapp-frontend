@@ -1,6 +1,5 @@
 .App {
   text-align: center;
- 
 }
 
 .root {
@@ -9,11 +8,11 @@
 }
 
 body {
-  background-color :#23272f;
-  color : #ffffff;
+  background-color: #23272f;
+  color: #ffffff;
 }
 
-  /** **/
+/** **/
 .main-content {
   margin-left: 290px;
   height: 100vh;
@@ -22,8 +21,3 @@ body {
 h1 {
   margin: 0;
 }
-
-
-
-
-
