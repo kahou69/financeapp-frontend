@@ -8,6 +8,7 @@ import AddTransactionForm from "../components/AddTransactionForm";
 
 const Transactions = () => {
   const [transactions, setTransactions] = useState([]);
+  const [total, setTotal] = useState(0);
   const [error, setError] = useState(null);
 
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -24,6 +25,25 @@ const Transactions = () => {
 
     getTransactions();
   }, []);
+
+  useEffect(() => {
+    calculateTotal();
+  }, [transactions]);
+
+  const calculateTotal = () => {
+    let income = 0;
+    let expense = 0;
+
+    transactions.forEach((transaction) => {
+      if (transaction.category.type === "INCOME") {
+        income += parseFloat(transaction.amount);
+      } else if (transaction.category.type === "EXPENSE") {
+        expense += parseFloat(transaction.amount);
+      }
+    });
+
+    setTotal(income - expense);
+  };
 
   if (error) {
     return <div>Error fetching transaction : {error}</div>;
@@ -77,7 +97,16 @@ const Transactions = () => {
                 <tr key={transaction.id}>
                   <td>{index + 1}</td>
                   <td>{transaction.description}</td>
-                  <td>{transaction.amount}</td>
+                  <td
+                    style={{
+                      color:
+                        transaction.category.type === "INCOME"
+                          ? "#4CAF50"
+                          : "#F44336",
+                    }}
+                  >
+                    {transaction.amount}
+                  </td>
                   <td>{transaction.date}</td>
                   <td>
                     {transaction.category.name} ({transaction.category.type})
@@ -86,6 +115,20 @@ const Transactions = () => {
               );
             })}
           </tbody>
+          <tfoot>
+            <tr>
+              <td colSpan={2}>Total</td>
+              <td
+                style={{
+                  color: total >= 0 ? "#4CAF50" : "#F44336",
+                  fontWeight: "bold",
+                }}
+              >
+                {total}
+              </td>
+              <td colSpan={2}></td>
+            </tr>
+          </tfoot>
         </table>
       </div>
       <Fab variant="extended" size="medium" onClick={handleDrawerOpen}>

@@ -21,6 +21,6 @@ tbody {
   background-color: #16181d;
 }
 
-thead {
+thead, tfoot {
   background-color: #fffbdd1a;
 }
