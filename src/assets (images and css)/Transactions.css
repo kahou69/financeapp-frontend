@@ -17,6 +17,13 @@ td {
   padding: 10px;
 }
 
+thead tr th {
+  position : sticky;
+  z-index: 1;
+  top: 0;
+  background-color: #464646;
+}
+
 tbody {
   background-color: #16181d;
 }
