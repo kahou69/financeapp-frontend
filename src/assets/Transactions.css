@@ -31,3 +31,16 @@ tbody {
 thead, tfoot {
   background-color: #fffbdd1a;
 }
+
+.transaction-drawer {
+  width :400px;
+  padding : 20px;
+  height: 100%;
+  background-color : #977cdc;
+  color: #fff;
+} 
+
+.transaction-drawer h2 {
+  text-align: center;
+  font-size: 2em;
+}

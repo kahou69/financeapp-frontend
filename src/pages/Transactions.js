@@ -3,7 +3,7 @@ import { fetchTransactions, addTransaction } from "../services (api)/api";
 import { Drawer, Fab } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 
-import "../assets (images and css)/Transactions.css";
+import "../assets/Transactions.css";
 import AddTransactionForm from "../components/AddTransactionForm";
 
 const Transactions = () => {
@@ -75,7 +75,7 @@ const Transactions = () => {
     <div>
       <h1>Your Transactions</h1>
       <Drawer anchor="right" open={isDrawerOpen} onClose={handleDrawerClose}>
-        <div style={{ width: "400px", padding: "20px" }}>
+        <div className="transaction-drawer">
           <h2>Add Transaction</h2>
           <AddTransactionForm onSubmit={addNewTransaction} />
         </div>

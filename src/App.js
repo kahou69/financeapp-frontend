@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Categories from "./pages/Categories";
 import Transactions from "./pages/Transactions";
 import Sidebar from "./components/Sidebar";
-import "./App.css";
+import "./assets/App.css";
 
 function App() {
   return (
