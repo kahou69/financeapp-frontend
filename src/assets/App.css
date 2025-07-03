@@ -1,10 +1,6 @@
 .App {
   text-align: center;
-}
-
-.root {
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: flex;
 }
 
 body {
@@ -14,7 +10,7 @@ body {
 
 /** **/
 .main-content {
-  margin-left: 290px;
+  flex-grow: 1;
   height: 100vh;
 }
 

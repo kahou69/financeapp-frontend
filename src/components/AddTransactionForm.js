@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { fetchCategoriesByType } from "../services (api)/api";
+import { fetchCategoriesByType } from "../services/CategoryService";
+import "../assets/AddTransactionForm.css"
 
 // eslint-disable-next-line react/prop-types
 const AddTransactionForm = ({ onSubmit }) => {

@@ -2,9 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../assets/Sidebar.css";
 import SavingsIcon from "@mui/icons-material/Savings";
-import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
-import CategoryIcon from "@mui/icons-material/Category";
-import HomeIcon from "@mui/icons-material/Home";
 
 const Sidebar = () => {
   return (
@@ -20,19 +17,19 @@ const Sidebar = () => {
         <li>
           <Link to="">
             {" "}
-            <HomeIcon /> Home
+            Home
           </Link>
         </li>
         <li>
           <Link to="/transactions">
             {" "}
-            <AccountBalanceWalletIcon /> Transactions
+           Transactions
           </Link>
         </li>
         <li>
           <Link to="/categories">
             {" "}
-            <CategoryIcon /> Categories
+            Categories
           </Link>
         </li>
       </ul>
